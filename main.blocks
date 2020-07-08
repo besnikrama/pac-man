@@ -1,0 +1,40 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="(9.iB`E~4Ete]BSzSwaE">Player</variable><variable type="KIND_SpriteKind" id="#x`+XsPT/MhB(@d2EX#g">Projectile</variable><variable type="KIND_SpriteKind" id="6$z:(b_sf.K}u-1d}8Zc">Food</variable><variable type="KIND_SpriteKind" id="nMwcqc|pJt0C~%n^uG04">Enemy</variable><variable id="vG~F-9V2[,:zSFA+o619">mySprite</variable><variable id="L-KGA:93!R_mkH-1/DS%">pac man</variable><variable type="BLOCKLY_TILESET_TYPE" id="R9HN[|t5XS}v6THgFOmf">0;16;16;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="L-KGA:93!R_mkH-1/DS%">pac man</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . 5 5 5 5 5 5 5 . . . . . . . 
+. 5 5 5 5 5 5 5 5 . . . . . . . 
+. 5 5 5 5 5 5 5 . . . . . . . . 
+. 5 5 5 5 5 5 . . . . . . . . . 
+. 5 5 5 5 5 . . . . . . . . . . 
+. 5 5 5 5 5 5 . . . . . . . . . 
+. 5 5 5 5 5 5 5 . . . . . . . . 
+. 5 5 5 5 5 5 5 5 . . . . . . . 
+. . 5 5 5 5 5 5 5 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="tilemap_editor"><field name="tilemap">tiles.createTilemap(
+            hex`10001000010606060606060606060606060606020805050505050505050505050505050708050b0505050b0b0b0b0505050b050708050b0b0505050b0b0505050b0b050708050b050505050b0b050505050b05070805050505050505050505050505050708050505050e050505050e050505050708050b0b0505050b0b0505050b0b050708050b050505050b0b050505050b050708050b0505050b0b0b0b0505050b05070805050505050505050505050e050507080505050e050b05050b05050505050708050b0505050b0d0d0b0505050b050708050b0b0b050b0b0b0b050b0b0b05070805050505050505050505050505050704090909090909090909090909090903`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 . . . . . . . . . . . . . . 2 
+2 . 2 . . . 2 2 2 2 . . . 2 . 2 
+2 . 2 2 . . . 2 2 . . . 2 2 . 2 
+2 . 2 . . . . 2 2 . . . . 2 . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . 2 2 . . . 2 2 . . . 2 2 . 2 
+2 . 2 . . . . 2 2 . . . . 2 . 2 
+2 . 2 . . . 2 2 2 2 . . . 2 . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . . 2 . . 2 . . . . . 2 
+2 . 2 . . . 2 . . 2 . . . 2 . 2 
+2 . 2 2 2 . 2 2 2 2 . 2 2 2 . 2 
+2 . . . . . . . . . . . . . . 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.castle.tilePath1,sprites.castle.tilePath3,sprites.castle.tilePath9,sprites.castle.tilePath7,sprites.castle.tilePath5,sprites.castle.tilePath2,sprites.castle.tilePath6,sprites.castle.tilePath4,sprites.castle.tilePath8,sprites.castle.tileGrass3,sprites.castle.tileDarkGrass1,sprites.castle.tileGrass1,sprites.builtin.forestTiles0,sprites.builtin.crowd9],
+            TileScale.Sixteen
+        )</field><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="L-KGA:93!R_mkH-1/DS%">pac man</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">76</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">69</field></shadow></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get"><field name="VAR" id="L-KGA:93!R_mkH-1/DS%">pac man</field></block></value><value name="vx"><shadow type="math_number"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">100</field></shadow></value><next><block type="camerafollow"><value name="sprite"><block type="variables_get"><field name="VAR" id="L-KGA:93!R_mkH-1/DS%">pac man</field></block></value><next><block type="gamecountdown"><value name="duration"><shadow type="math_number"><field name="NUM">30</field></shadow></value><next><block type="game_show_long_text"><field name="layout">DialogLayout.Bottom</field><value name="str"><shadow type="text"><field name="TEXT">welcome to pac-man help him to find his home.</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="spriteshittile" x="20" y="640"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">sprites.builtin.forestTiles0</field></shadow></value><value name="HANDLER_DRAG_PARAM_location"><shadow type="argument_reporter_custom"><mutation typename="tiles.Location"/><field name="VALUE">location</field></shadow></value><statement name="HANDLER"><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="win"><shadow type="toggleWinLose"><field name="win">true</field></shadow></value></block></statement></block><block type="spriteshittile" x="70" y="790"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">sprites.builtin.crowd9</field></shadow></value><value name="HANDLER_DRAG_PARAM_location"><shadow type="argument_reporter_custom"><mutation typename="tiles.Location"/><field name="VALUE">location</field></shadow></value><statement name="HANDLER"><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="win"><shadow type="toggleWinLose"><field name="win">false</field></shadow></value></block></statement></block></xml>
